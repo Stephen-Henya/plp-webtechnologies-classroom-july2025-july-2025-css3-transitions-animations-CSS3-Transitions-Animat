@@ -1,0 +1,62 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+/* =============== PART 1: CSS3 Transitions & Animations =============== */
+
+/* Button hover transition */
+.animated-btn {
+  padding: 12px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s; /* smooth transition */
+}
+.animated-btn:hover {
+  transform: scale(1.1); /* enlarge on hover */
+  background: #0056b3;
+}
+
+/* Continuous animation with keyframes */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: tomato;
+  border-radius: 10px;
+  animation: pulse 2s infinite alternate; /* looping animation */
+}
+
+/* Keyframes for pulsing effect */
+@keyframes pulse {
+  from { transform: scale(1); background: tomato; }
+  to { transform: scale(1.2); background: orangered; }
+}
+
+/* =============== PART 3: CSS + JS Together =============== */
+
+/* Box initially static */
+#trigger-box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: mediumseagreen;
+  border-radius: 10px;
+}
+
+/* Animation class to be toggled by JS */
+.animate {
+  animation: slideAndFade 1.5s forwards;
+}
+
+/* Keyframes for sliding + fading */
+@keyframes slideAndFade {
+  from { transform: translateY(0); opacity: 1; }
+  to   { transform: translateY(-50px); opacity: 0; }
+}
